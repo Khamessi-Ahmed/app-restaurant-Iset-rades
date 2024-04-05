@@ -1,0 +1,57 @@
+<body>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css "/><br><br><br><br><br><br><br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+            <div class="panel">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-sm-12 col-xs-12">
+                            <a [routerLink]="['/add-menu']" class="btn btn-sm btn-primary pull-left"><i class="fa fa-plus-circle"></i> Add New</a>
+                            <form class="form-horizontal pull-right">
+                                <div class="form-group">
+                                    <label>Menus List</label>
+                                   
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Action</th>
+                                <th>Date</th>
+                                <th>Description</th>
+                                <th>Dessert</th>
+                                <th>Quantity</th>
+                                <th>supplement</th>
+                                <th>View</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let m of menus ">
+                                <td>
+                                    <ul class="action-list">
+                                        <li><a (click)="updateMenu(m.id)" class="btn btn-primary"><i class="fa fa-pencil"></i></a></li>
+                                        <li><a  (click)="deleteMenu(m.id)" class="btn btn-danger"><i class="fa fa-times"></i></a></li>
+                                    </ul>
+                                </td>
+                                <td>{{m.date}}</td>
+                                <td>{{m.descriptionPlat}}</td>
+                                <td>{{m.dessert}}</td>
+                                <td>{{m.qteDisponible}}</td>
+                                <td>{{m.supplement}}</td>
+                                <td><a class="btn btn-sm btn-success" (click)="viewDetails(m.id)"><i class="fa fa-search"></i></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br>
+</body>

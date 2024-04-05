@@ -1,0 +1,43 @@
+
+<br/><br/><br/><br/><br/><br/>
+<h1>Ajouter un étudiant</h1>
+
+
+
+
+
+
+<form class="form-container" >
+
+   
+
+      
+      <div class="signup-form">
+        <h2>ADD user</h2>
+        <form #signupForm="ngForm">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" class="form-control" [(ngModel)]="registerRequest.email" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" name="password" class="form-control" [(ngModel)]="registerRequest.password" required>
+          </div>
+          <div class="form-group">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" class="form-control" [(ngModel)]="registerRequest.nom" required>
+          </div>
+          <div class="form-group">
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" name="prenom" class="form-control" [(ngModel)]="registerRequest.prenom" required>
+          </div>
+          <div class="role-selection">
+            <h2>Ajouter en tanque  </h2>
+            <button type="submit" class="btn btn-primary btn-block mb-4"  (click)="signupEtudiant()">Étudiant</button>
+            <button type="submit" class="btn btn-primary btn-block mb-4" (click)="signupChef()">Chef</button>
+          </div>
+          
+        </form>
+      </div>
+      
+</form>

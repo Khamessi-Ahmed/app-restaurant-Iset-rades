@@ -1,0 +1,83 @@
+<body>
+    <div class="container-fluid px-1 py-5 mx-auto">
+        <div class="row d-flex justify-content-center">
+            <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+                <br>
+                <br>
+                <br>
+                <br>
+                <h3>Update Menu</h3>
+                <div class="card">
+                    <form class="form-card" (ngSubmit)="onSubmit()" [formGroup]="updateForm" >
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Description<span class="text-danger"> *</span></label> 
+                                <input type="text" id="fname" name="fname" formControlName="description"></div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Dessert<span class="text-danger"> *</span></label>
+                                 <input type="text" id="lname" name="lname"  formControlName="dessert"> </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Supplement<span class="text-danger"> *</span></label> 
+                                <input type="text" id="fname" name="fname" placeholder="Description of the meal"  formControlName="supplement"> </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Date<span class="text-danger"> *</span></label>
+                                 <input type="date" id="lname" name="lname"  formControlName="date"> </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Quantity<span class="text-danger"> *</span></label>
+                                 <input type="number" id="email" name="email"  formControlName="qteDisponible"> </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Photo<span class="text-danger"> *</span></label> 
+                                <input type="file" id="mob" name="mob" placeholder="" onblur="validate(4)"> </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="row justify-content-end">
+                            <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-primary">Validate</button> </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Display error message if it exists -->
+<div *ngIf="errorMessage" class="alert alert-danger">
+    {{ errorMessage }}
+  </div>
+     
+        
+
+    <script>
+        function validateForm(event) {
+            event.preventDefault(); // Prevent form submission
+            var v1 = document.getElementById("fname");
+            var v2 = document.getElementById("lname");
+            var v3 = document.getElementById("email");
+
+            var flag1 = validate(1, v1);
+            var flag2 = validate(2, v2);
+            var flag3 = validate(3, v3);
+
+            var flag = flag1 && flag2 && flag3;
+
+            if (flag) {
+                // Form is valid, you can submit the form here if needed
+                // For demonstration, I'll log a message
+                console.log("Form is valid. Submitting...");
+                // Uncomment the line below to submit the form
+                // event.target.submit();
+            } else {
+                console.log("Form is not valid. Please fill in all required fields.");
+            }
+        }
+
+        function validate(val, input) {
+            if (input.value.trim() === "") {
+                input.style.borderColor = "red";
+                return false;
+            } else {
+                input.style.borderColor = "green";
+                return true;
+            }
+        }
+    </script>
+</body>

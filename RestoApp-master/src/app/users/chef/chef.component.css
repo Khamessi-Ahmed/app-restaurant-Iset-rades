@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: wheat;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.button-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonM,
+.buttonR,
+.buttonA {
+  width: 350px; /* Set a fixed width */
+  height: 350px; /* Set a fixed height */
+  font-size: 24px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.3s;
+  border: 1px solid black;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* Rest of your CSS styles remain unchanged */
+
+.buttonM {
+  background-image: url(../../../assets/img/menu.png);
+}
+
+.buttonR {
+  background-image: url(../../../assets/img/ajouter.png);
+}
+.buttonA {
+  background-image: url(../../../assets/img/profile.png);
+}
+.buttonR:hover, .buttonM:hover,.buttonA:hover {
+  transform: scale(1.5);
+}

@@ -1,0 +1,98 @@
+<!-- Section: Design Block -->
+<section class="background-radial-gradient overflow-hidden">
+  <style>
+    .background-radial-gradient {
+      background-color: hsl(218, 41%, 15%);
+      background-image: url('https://wallpapers.com/images/hd/food-4k-m37wpodzrcbv5gvw.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    
+
+    }
+
+    .bg-glass {
+      background-color: hsla(0, 0%, 100%, 0.9) !important;
+      backdrop-filter: saturate(200%) blur(25px);
+    }
+  </style>
+
+  <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+    <div class="row gx-lg-5 align-items-center mb-5">
+      <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+        <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
+          WELCOME <br />
+          <span style="color: hsl(218, 81%, 75%)">TO E-RESTO</span>
+        </h1>
+        <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
+          Gourmet Reflection of Your College: Your Digital Platform for Dining and Delicious Interactions
+        </p>
+      </div>
+
+      <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+        <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+        <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+
+        <div class="card bg-glass">
+          <div class="card-body px-4 py-5 px-md-5">
+            <form>
+              <!-- 2 column grid layout with text inputs for the first and last names -->
+              
+
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <input type="text" id="form3Example3" class="form-control" name="nom" [(ngModel)]="registerRequest.nom"/>
+                <label class="form-label" for="form3Example3">Last Name</label>
+              </div>
+
+              <!-- Password input -->
+              <div class="form-outline mb-4">
+                <input type="text" id="form3Example4" class="form-control" name="prenom" [(ngModel)]="registerRequest.prenom" />
+                <label class="form-label" for="form3Example4">First Name</label>
+              </div>
+              <div class="form-outline">
+                <input type="email" id="form3Example1" class="form-control" name="email" [(ngModel)]="registerRequest.email"/>
+                <label class="form-label" for="form3Example1">Email</label>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" id="form3Example12" class="form-control" name="card" [(ngModel)]="registerRequest.numeroEtudiant"/>
+                    <label class="form-label" for="form3Example1">Restaurant card </label>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="password" id="form3Example2" class="form-control" name="code"  [(ngModel)]="registerRequest.codeSecurite" />
+                    <label class="form-label" for="form3Example2">Security code</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="password" id="form3Example12" class="form-control" name="password" [(ngModel)]="registerRequest.password"/>
+                    <label class="form-label" for="form3Example1">Password</label>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="password" id="form3Example2" class="form-control" name="cpassword"  [(ngModel)]="password2" />
+                    <label class="form-label" for="form3Example2">Confirm password</label>
+                  </div>
+                </div>
+              </div>
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-primary btn-block mb-4" (click)="signupEtudiant()">
+                Sign up
+              </button>
+
+              <!-- Register buttons -->
+             
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Section: Design Block -->
